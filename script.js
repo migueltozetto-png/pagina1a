@@ -1,15 +1,22 @@
-// Seleciona os elementos do HTML que vamos usar
-const botao = document.getElementById('botao-clique');
-const displayContador = document.getElementById('contador');
+// Variáveis para armazenar os gols
+let golsTimeA = 0;
+let golsTimeB = 0;
 
-// Cria a variável que vai guardar o número de cliques
-let cliques = 0;
+// Função para adicionar gols
+function marcarGol(time) {
+    if (time === 'a') {
+        golsTimeA++;
+        document.getElementById('gols-a').innerText = golsTimeA;
+    } else if (time === 'b') {
+        golsTimeB++;
+        document.getElementById('gols-b').innerText = golsTimeB;
+    }
+}
 
-// Adiciona um evento de escuta para o clique no botão
-botao.addEventListener('click', () => {
-    // Incrementa o valor em 1
-    cliques++;
-    
-    // Atualiza o texto que aparece na tela
-    displayContador.textContent = cliques;
-});
+// Função para zerar o placar
+function reiniciarPartida() {
+    golsTimeA = 0;
+    golsTimeB = 0;
+    document.getElementById('gols-a').innerText = golsTimeA;
+    document.getElementById('gols-b').innerText = golsTimeB;
+}

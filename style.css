@@ -1,4 +1,4 @@
-/* Reset básico para limpar margens padrões */
+/* Configurações Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -6,58 +6,141 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Centraliza o conteúdo na tela */
 body {
+    background-color: #121212;
+    color: #ffffff;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
-    background-color: #f0f2f5;
 }
 
-/* Estilização do card principal */
-.card {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #1e5128, #4e9f3d);
     text-align: center;
-    max-width: 300px;
-    width: 100%;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 15px;
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Estilo do número do contador */
-#contador {
-    font-size: 48px;
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 20px;
+/* Layout Principal */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
 }
 
-/* Estilo do botão interativo */
-#botao-clique {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
+.conteudo {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
     border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 5px solid #4e9f3d;
+}
+
+.conteudo h2 {
+    margin-bottom: 1rem;
+    color: #4e9f3d;
+}
+
+.conteudo p {
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Seção do Placar */
+.placar-container {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.placar-container h2 {
+    margin-bottom: 1.5rem;
+    color: #4e9f3d;
+}
+
+.placar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nome-time {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.gols {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d8b257; /* Cor dourada para os gols */
+    background-color: #121212;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    min-width: 80px;
+}
+
+.vs {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #888888;
+}
+
+/* Botões */
+button {
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
 }
 
-/* Efeito ao passar o mouse */
-#botao-clique:hover {
-    background-color: #0056b3;
+.btn-gol {
+    background-color: #4e9f3d;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-/* Efeito ao clicar */
-#botao-clique:active {
-    transform: scale(0.95);
+.btn-gol:hover {
+    background-color: #3e8e2f;
+}
+
+.btn-reset {
+    background-color: #333333;
+    color: #bbbbbb;
+    padding: 0.6rem 2rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.btn-reset:hover {
+    background-color: #444444;
+    color: white;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    color: #666666;
+    font-size: 0.9rem;
+    margin-top: auto;
 }

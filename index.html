@@ -3,16 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Contador Interativo</title>
+    <title>Portal do Futebol</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="card">
-        <h1>Contador de Cliques</h1>
-        <p id="contador">0</p>
-        <button id="botao-clique">Clique aqui!</button>
-    </div>
+    <header>
+        <h1>Mundo do Futebol</h1>
+        <p>Acompanhe a paixão pelo esporte mais popular do planeta!</p>
+    </header>
+
+    <main class="container">
+        <section class="conteudo">
+            <h2>A Paixão Nacional</h2>
+            <p>O futebol vai muito além das quatro linhas. É emoção, tática, união e história. Seja nos grandes estádios ou na linha do terrão, o esporte conecta pessoas do mundo inteiro.</p>
+        </section>
+
+        <section class="placar-container">
+            <h2>Simulador de Placar Ao Vivo</h2>
+            <div class="placar">
+                <div class="time">
+                    <span class="nome-time">Time A</span>
+                    <span id="gols-a" class="gols">0</span>
+                    <button onclick="marcarGol('a')" class="btn-gol">Gol!</button>
+                </div>
+                
+                <span class="vs">X</span>
+
+                <div class="time">
+                    <span class="nome-time">Time B</span>
+                    <span id="gols-b" class="gols">0</span>
+                    <button onclick="marcarGol('b')" class="btn-gol">Gol!</button>
+                </div>
+            </div>
+            <button onclick="reiniciarPartida()" class="btn-reset">Reiniciar Partida</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido por um fã de futebol</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
